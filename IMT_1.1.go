@@ -11,8 +11,10 @@ func main() {
 		height, weight := getUserInput()
 		IMT, err := calculateIMT(height, weight)
 		if err != nil {
-			fmt.Println(err)
-			continue
+			// fmt.Println(err)
+			// continue
+			fmt.Println()
+			panic(err)
 		}
 		fmt.Printf("Ваш индекс массы тела %.1f\n", IMT)
 		fmt.Println(identifyCondition(IMT))
